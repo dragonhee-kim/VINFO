@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:gravity="right|center"
+        android:background="#a1cde1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center">
+
+
+            <Button
+                android:id="@+id/gpsButton"
+                android:layout_width="100px"
+                android:layout_height="40dp"
+                android:layout_margin="10px"
+                android:layout_gravity="center"
+                android:background="#ffffff"
+                android:text="GPS" />
+
+            <Button
+                android:id="@+id/speakButton"
+                android:layout_width="100px"
+                android:layout_height="40dp"
+                android:layout_margin="10px"
+                android:background="#ffffff"
+                android:text="소리" />
+
+            <Button
+                android:id="@+id/ttsStop"
+                android:layout_width="100px"
+                android:layout_height="40dp"
+                android:layout_margin="10px"
+                android:background="#ffffff"
+                android:text="TTS" />
+
+
+            <Button
+                android:id="@+id/sendButton"
+                android:layout_width="100px"
+                android:layout_height="40dp"
+                android:layout_margin="10px"
+                android:background="#ffffff"
+                android:text="보냄" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/waitCircle"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="80dp"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <TextView
+                android:id="@+id/listenText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20px"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="인식 내용"
+                android:textSize="30dp" />
+        </LinearLayout>
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/weatherLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="120dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="invisible">
+
+
+                    <ImageView
+                        android:id="@+id/weather_picture"
+                        android:layout_gravity="center"
+                        android:layout_width="80dp"
+                        android:layout_height="70dp" />
+
+                    <LinearLayout
+                        android:id="@+id/weatherTextLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/weather_type_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="날씨" />
+
+                        <TextView
+                            android:id="@+id/weather_temperature_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="온도" />
+
+
+                        <TextView
+
+                            android:id="@+id/weather_humidity_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                        android:text="습도" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ImageButtonLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    >
+
+                    <ImageButton
+                        android:layout_width="80dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:background="#ffffff"
+                        android:visibility="invisible"
+                        android:id="@+id/typeimagebutton"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/resultTextLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        >
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/gpsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="gpsValue"
+                    android:visibility="invisible" />
+
+
+                <TextView
+                    android:id="@+id/lattext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="위도"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/logtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="경도"
+                    android:visibility="invisible" />
+
+
+            </FrameLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/listenButton"
+            android:layout_width="500px"
+            android:layout_height="wrap_content"
+            android:layout_margin="20px"
+            android:background="#ffffff"
+            android:src="@drawable/round_mic_black_36dp" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="결과텍스트"
+        android:visibility="invisible" />
+
+
+</LinearLayout>
+    <!-- 음성 합성-->
+    <!--
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="텍스트를 입력하세요."
+            />
+        <Button
+            android:id="@+id/button01"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:text="TTS 실행"
+            android:textColor="#000000"
+            android:textSize="18dp"/>
+        <Button
+            android:id="@+id/button02"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:text="TTS 목소리 톤 설정 높게 [tts.setPitch(1.5f)]"
+            android:textColor="#000000"
+            android:textSize="18dp"/>
+        <Button
+            android:id="@+id/button03"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:text="TTS 목소리 톤 설정 낮게 [tts.setPitch(0.5f)]"
+            android:textColor="#000000"
+            android:textSize="18dp"/>
+        <Button
+            android:id="@+id/button04"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:text="TTS 목소리 속도 설정 빠르게 [tts.setSpeechRate(1.5f)]"
+            android:textColor="#000000"
+            android:textSize="18dp"/>
+        <Button
+            android:id="@+id/button05"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:text="TTS 목소리 속도 설정 느리게 [tts.setSpeechRate(0.5f)]"
+            android:textColor="#000000"
+            android:textSize="18dp"/>
+
+    </LinearLayout>
+
+    -->
